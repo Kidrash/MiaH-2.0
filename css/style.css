@@ -1,0 +1,360 @@
+/* Base styles and CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #fffffff1;
+    --text-color: #333;
+    --light-text-color: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+section {
+    padding: 6rem 0;
+}
+
+/* Hero Section */
+#hero {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 8rem 0;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--light-text-color);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Demo Section */
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+#features {
+    background-color: var(--light-text-col or);
+}
+
+.feature-highlight {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-highlight img {
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-text li {
+    margin-bottom: 1rem;
+    padding-left: 30px;
+    position: relative;
+}
+
+.feature-text li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Purchase Section */
+#purchase {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.purchase-card {
+    background-color: var(--light-text-color);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.purchase-card .price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.purchase-card .price span {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.purchase-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.purchase-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Payment Page Styles */
+.payment-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+#purchase-summary {
+    background-color: var(--light-text-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#purchase-summary .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+#payment-form {
+    background-color: var(--light-text-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#payment-status, #confirmation {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}

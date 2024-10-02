@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradePro - Complete Your Purchase</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/payment.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TradePro</div>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="payment-page">
+        <h1>Complete Your Purchase</h1>
+        <div id="purchase-summary">
+            <h2>TradePro Full Package</h2>
+            <p class="price">Total: $150 USD</p>
+        </div>
+
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (for M-Pesa)</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <button type="submit" class="cta-button">Pay with M-Pesa</button>
+        </form>
+
+        <div id="payment-status" class="hidden">
+            <p>Processing your payment...</p>
+            <div class="loader"></div>
+        </div>
+
+        <div id="confirmation" class="hidden">
+            <h2>Thank You for Your Purchase!</h2>
+            <p>Your TradePro software is ready for download.</p>
+            <a href="#" class="cta-button" id="download-button">Download TradePro</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TradePro. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
