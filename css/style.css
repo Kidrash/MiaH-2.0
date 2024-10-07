@@ -19,6 +19,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    margin-bottom: 0;
 }
 
 /* Typography */
@@ -236,7 +237,7 @@ section {
 footer {
     background-color: var(--primary-color);
     color: var(--light-text-color);
-    padding: 3rem 0;
+    padding: 3rem 0 0;
 }
 
 .footer-content {
@@ -271,12 +272,12 @@ footer {
 }
 
 .copyright {
+    margin-top: 2rem; /* Add some space above the copyright */
+    background-color: #333;
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
+    padding: 0.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 /* Payment Page Styles */
 .payment-page {
     max-width: 600px;
