@@ -9,7 +9,7 @@
     --primary-color: #2c4b50;
     --secondary-color: #3498db;
     --accent-color: #3ce753;
-    --background-color: #fffffff1;
+    --background-color: #ffffff3;
     --text-color: #333;
     --light-text-color: #ffffff;
 }
@@ -42,7 +42,6 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
 }
-
 /* Layout */
 .container {
     max-width: 1200px;
@@ -57,11 +56,7 @@ header {
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-/* 
-#payment-nav{
-    position: sticky;
-    margin-top: 0;
-} */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -160,7 +155,13 @@ section {
 
 /* Features Section */
 #features {
-    background-color: var(--light-text-col or);
+    background-color: var(--primary-color);
+    color: #ccc;
+}
+#features h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--light-text-color);
 }
 
 .feature-highlight {
@@ -177,8 +178,9 @@ section {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.feature-text {
+.feature-text h1{
     flex: 1;
+    color: var(--light-text-colors);
 }
 
 .feature-text ul {
@@ -200,6 +202,29 @@ section {
     font-weight: bold;
 }
 
+.charting-section {
+    color: #ffffff; /* Change to a lighter color */
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 8rem;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
+}
+
+.charting-section h2 {
+    color: #ffffff; /* Accent color for heading if needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Optional shadow for emphasis */
+}
+.charting-section h3 {
+    color: #ffffff; /* Accent color for heading if needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Optional shadow for emphasis */
+}
+
+.charting-section ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
 /* Purchase Section */
 #purchase {
     background-color: var(--background-color);
@@ -207,14 +232,13 @@ section {
 }
 
 .purchase-card {
-    background-color: var(--light-text-color);
+    background-color: rgb(124, 124, 124);
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     max-width: 500px;
     margin: 0 auto;
 }
-
 .purchase-card .price {
     font-size: 3rem;
     font-weight: bold;
@@ -242,7 +266,7 @@ section {
 footer {
     background-color: var(--primary-color);
     color: var(--light-text-color);
-    padding: 3rem 0 0;
+    
 }
 
 .footer-content {
@@ -283,6 +307,7 @@ footer {
     padding: 0.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 /* Payment Page Styles */
 .payment-page {
     max-width: 600px;
@@ -354,13 +379,127 @@ footer {
     display: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
+/* Payment method buttons */
+.payment-methods {
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
-    h2 {
-        font-size: 2rem;
-    }
+.method-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.method-btn {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover styles for each payment method */
+.method-btn[data-method="telegram"]:hover, 
+.method-btn[data-method="telegram"].active {
+    background-color: #3f80bd;
+    border-color: #3f80bd;
+    color: var(--light-text-color);
+}
+
+
+.method-btn[data-method="skrill"]:hover, 
+.method-btn[data-method="skrill"].active {
+    background-color: #8E44AD;
+    border-color: #8E44AD;
+    color: var(--light-text-color);
+}
+
+.method-btn[data-method="binance"]:hover, 
+.method-btn[data-method="binance"].active {
+    background-color: orange;
+    border-color: orange;
+    color: var(--light-text-color);
+}
+
+.method-btn[data-method="bank"]:hover, 
+.method-btn[data-method="bank"].active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+.method-btn[data-method="mpesa"]:hover, 
+.method-btn[data-method="mpesa"].active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--light-text-color);
+}
+
+.payment-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--light-text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.method-form {
+    display: none;
+}
+
+label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.confirmation {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.confirmation p {
+    margin-bottom: 1rem;
+}
+/* Complete Payment button */
+.btn-primary {
+    display: inline-block;
+    background-color: #3498db; /* Blue color matching the Get Software Now button */
+    color: white; /* White text */
+    padding: 0.75rem 2rem; /* Adjust padding for similar size */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Spacing between letters */
+    transition: all 0.2s ease; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-primary:hover {
+    background-color: #3ce753; /* Green hover effect */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }

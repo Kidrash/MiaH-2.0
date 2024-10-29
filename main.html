@@ -11,7 +11,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">MiaH Software</div>
+            <div class="logo">
+                <a href="#hero">THE MIAH WAY</a>
+            </div>
             <ul>
                 <li><a href="#demo">Demo</a></li>
                 <li><a href="#purchase">Purchase</a></li>
@@ -23,23 +25,26 @@
         <section id="hero">
             <h1>Elevate Your Trading with MiaH Software</h1>
             <p>Advanced charting and real-time data analysis for serious traders.</p>
-            <a href="#purchase" class="cta-button">Get Software Now</a>
+            <a href="https://t.me/Kuria_jeremih?start=Payment%20Confirmation" class="cta-button">Get Software Now</a>
         </section>
 
         <section id="demo">
-            <h2>Experience MiaH Software in Action</h2>
+            <h2>Check out MiaH Software in Action</h2>
             <div class="video-container">
                 <video controls preload="none" poster="img/video-placeholder.jpg">
-                    <source src="video/tradepro-demo.mp4" type="video/mp4">
+                    <source src="./media/WhatsApp Video 2024-10-08 at 13.56.51_f7fa6894.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </section>
 
-        <section id="features">
+        <section id="features" class="charting-section">
             <h2>Advanced Charting</h2>
             <div class="feature-highlight">
-                <img src="img/advanced-chart.jpg" alt="Advanced charting example">
+                <video controls preload="none" poster="img/video-placeholder.jpg">
+                    <source src="./media/WhatsApp Video 2024-10-08 at 14.00.42_97370732.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="feature-text">
                     <h3>Powerful Technical Analysis Tools</h3>
                     <ul>
@@ -52,15 +57,49 @@
             </div>
         </section>
 
-        <section id="purchase">
-            <h2>Get MiaH Software Today</h2>
-            <div class="purchase-card">
-                <h3>MiaH Software Full Package</h3>
-                <p class="price">$150 one-time purchase</p>
-                <a href="payment.html" class="cta-button">Buy Now</a>
+        <section id="payment" class="section">
+            <h2>Get MiaH Software Today at just USD 50</h2>
+            <div class="payment-methods">
+                <div class="method-buttons">
+                    <!-- Payment method buttons with only Telegram enabled -->
+                    <button class="method-btn active" data-method="telegram" enabled>Pay via Telegram</button>
+                    <button class="method-btn" data-method="skrill" disabled>Skrill (Coming Soon)</button>
+                    <button class="method-btn" data-method="binance" disabled>Binance (Coming Soon)</button>
+                    <button class="method-btn" data-method="bank" disabled>Bank Transfer (Coming Soon)</button>
+                    <button class="method-btn" data-method="mpesa" disabled>Mpesa (Coming Soon)</button>
+                </div>
+            </div>
+            <div id="payment-form-container">
+                <div id="telegram-form" class="method-form" style="display: none;">
+                    <button type="button" class="btn-primary"  onclick="window.open('https://t.me/Kuria_jeremih?start=Payment%20Confirmation', '_blank')">Pay Now</button>
+                </div>
+                <!-- Placeholder for the payment form, which loads based on selected method (for the coming soon ones) -->
+                <!-- <main>
+                    <section class="payment-methods">
+                        <h2>Select Payment Method</h2>
+                        <div class="method-buttons">
+                            <button class="method-btn" data-method="mpesa">Mpesa</button>
+                            <button class="method-btn" data-method="skrill">Skrill</button>
+                            <button class="method-btn" data-method="bank">Bank Transfer</button>
+                        </div>
+                    </section>
+            
+                    <section class="payment-form">
+                        <form id="paymentForm">
+                            <div id="mpesa-form" class="method-form">
+                                <label for="mpesa-number">Mpesa Number:</label>
+                                <input type="tel" id="mpesa-number" name="mpesa-number" placeholder="Enter your M-Pesa Number" required>
+                            </div>
+                    
+                            <div id="skrill-form" class="method-form">
+                                <label for="skrill-email">Skrill Email:</label>
+                            <input type="email" id="skrill-email" name="skrill-email" placeholder="Enter your Skrill Email" required>
+                            <button type="submit" class="btn-primary">Complete Skrill Payment</button>
+                            </div>
+                     </main>-->
+                            
             </div>
         </section>
-    </main>
 
     <footer>
         <div class="footer-content">
